@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Projects on RBS</title>
+		<link>https://rbs228.github.io/projects/</link>
+		<description>Recent content in Projects on rbs228.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>fr-FR</language>
+		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
+		<lastBuildDate>Sun, 18 Dec 2022 03:16:25 -0800</lastBuildDate>
+		<atom:link href="https://rbs228.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Create 2D Game</title>
+			<link>https://rbs228.github.io/projects/create-2d-game/</link>
+			<pubDate>Sun, 18 Dec 2022 02:29:56 -0800</pubDate>
+			<guid>https://rbs228.github.io/projects/create-2d-game/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Fastcopy</title>
+			<link>https://rbs228.github.io/projects/fastcopy/</link>
+			<pubDate>Sun, 18 Dec 2022 03:16:25 -0800</pubDate>
+			<guid>https://rbs228.github.io/projects/fastcopy/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Flappy Bird Game</title>
+			<link>https://rbs228.github.io/projects/flappy-bird-game/</link>
+			<pubDate>Sun, 18 Dec 2022 03:16:08 -0800</pubDate>
+			<guid>https://rbs228.github.io/projects/flappy-bird-game/</guid>
+			<description>
+			
+			</description>
+		</item>
+	</channel>
+</rss>

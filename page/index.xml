@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on RBS</title>
+    <link>https://rbs228.github.io/page/</link>
+    <description>Recent content in About on RBS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 16 Dec 2022 01:37:15 -0800</lastBuildDate><atom:link href="https://rbs228.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://rbs228.github.io/page/about/</link>
+      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
+      
+      <guid>https://rbs228.github.io/page/about/</guid>
+      <description>Who iam ? Well, good question. Very simple iam Paguedem (call me RBS = real black star). I&amp;rsquo;m a African, Togolese.
+What i like ? Programming, art
+Education ? Veterinary student (poor rbs, he don&amp;rsquo;t like it i guess)
+&amp;hellip; I dont know, what else you want to know ? rach me here maliksoumaila5@gmail.com</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://rbs228.github.io/page/contact/</link>
+      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
+      
+      <guid>https://rbs228.github.io/page/contact/</guid>
+      <description>Contact </description>
+    </item>
+    
+    <item>
+      <title>Home</title>
+      <link>https://rbs228.github.io/page/home/</link>
+      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
+      
+      <guid>https://rbs228.github.io/page/home/</guid>
+      <description>Home </description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://rbs228.github.io/page/blog/</link>
+      <pubDate>Sun, 28 Sep 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://rbs228.github.io/page/blog/</guid>
+      <description>Blog my </description>
+    </item>
+    
+  </channel>
+</rss>

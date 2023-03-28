@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust - niveau avancé on RBS</title>
+    <link>https://rbs228.github.io/tags/rust-niveau-avanc%C3%A9/</link>
+    <description>Recent content in Rust - niveau avancé on RBS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 03 Apr 2015 02:13:50 +0000</lastBuildDate><atom:link href="https://rbs228.github.io/tags/rust-niveau-avanc%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Home</title>
+      <link>https://rbs228.github.io/page/home/</link>
+      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
+      
+      <guid>https://rbs228.github.io/page/home/</guid>
+      <description>Home </description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://rbs228.github.io/page/blog/</link>
+      <pubDate>Sun, 28 Sep 2014 02:13:50 +0000</pubDate>
+      
+      <guid>https://rbs228.github.io/page/blog/</guid>
+      <description>Blog my </description>
+    </item>
+    
+  </channel>
+</rss>

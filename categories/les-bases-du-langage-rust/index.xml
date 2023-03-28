@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Les bases du langage Rust on RBS</title>
+		<link>https://rbs228.github.io/categories/les-bases-du-langage-rust/</link>
+		<description>Recent content in Les bases du langage Rust on rbs228.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>fr-FR</language>
+		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
+		<lastBuildDate>Mon, 19 Dec 2022 00:00:00 +0000</lastBuildDate>
+		<atom:link href="https://rbs228.github.io/categories/les-bases-du-langage-rust/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Généralités sur le langage Rust</title>
+			<link>https://rbs228.github.io/posts/1-generalities/</link>
+			<pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate>
+			<guid>https://rbs228.github.io/posts/1-generalities/</guid>
+			<description>
+			Quelques informations sur Rust
+			</description>
+		</item>
+		<item>
+			<title>Installation des outils</title>
+			<link>https://rbs228.github.io/posts/2-installation-des-outils/</link>
+			<pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
+			<guid>https://rbs228.github.io/posts/2-installation-des-outils/</guid>
+			<description>
+			installation
+			</description>
+		</item>
+		<item>
+			<title>Le Hello world et anatomie d&#39;un programme Rust</title>
+			<link>https://rbs228.github.io/posts/3-hello-world/</link>
+			<pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate>
+			<guid>https://rbs228.github.io/posts/3-hello-world/</guid>
+			<description>
+			Les différentes parties d&#39;un programme Rust
+			</description>
+		</item>
+	</channel>
+</rss>

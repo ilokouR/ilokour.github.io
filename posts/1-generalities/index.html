@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Généralités sur le langage Rust | RBS</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.108.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="rbs">
+<meta name="keywords" content="Rust, series, Les bases de Rust, programmation">
+<meta name="description" content="Quelques informations sur Rust">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="Généralités sur le langage Rust" />
+<meta property="og:description" content="Quelques informations sur Rust" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rbs228.github.io/posts/1-generalities/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Généralités sur le langage Rust"/>
+<meta name="twitter:description" content="Quelques informations sur Rust"/>
+
+<meta itemprop="name" content="Généralités sur le langage Rust">
+<meta itemprop="description" content="Quelques informations sur Rust"><meta itemprop="datePublished" content="2022-12-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-12-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="375">
+<meta itemprop="keywords" content="Rust,series,Les bases de Rust,programmation," />
+
+
+<style>
+
+    .pagination-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 2rem;
+    }
+    .pagination-bottom a{
+        padding: 10px;
+        background-color: rgb(218, 220, 221);
+        border: 1px solid rgb(224, 223, 223);
+    }
+
+    h1, h2 {
+        color:crimson;
+    }
+    h3, h4 {
+        color:rgb(102, 75, 201);
+    }
+    
+</style>
+</head>
+<body>
+<header>
+<div id="titletext">
+<h2 id="title"><a href="https://rbs228.github.io/">RBS</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">The real black star</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/rbs228" rel="me" aria-label="Github"><span title="Github" class="icons fab fa-github" aria-hidden="true"></span></a></li>
+<li><a href="https://twitter.com/drealblackstar" rel="me" aria-label="Twitter"><span title="Twitter" class="icons fab fa-twitter" aria-hidden="true"></span></a></li>
+<li><button id="dark-mode" aria-label="Switch Dark Mode"><span title="Switch Dark Mode" class="icons fas fa-moon" aria-hidden="true"></span></button></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Posts</a></li>
+<li><a href="/projects">Projets</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Catégories</a></li>
+<li><a href="/other">Autres</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">18</span>
+<span class="rest">Dec 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Généralités sur le langage Rust</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+
+
+<span aria-label="Author:"><span class="fas fa-user" aria-hidden="true"></span></span>&nbsp;
+
+rbs
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<h2 id="sommaire"><strong>Sommaire</strong></h2>
+<ol>
+<li>Historique de Rust ?</li>
+<li>C&rsquo;est quoi Rust ?</li>
+<li>A quoi il Sert ?</li>
+<li>Qui utilise Rust ?</li>
+<li>Les Ressources pour apprendre Rust</li>
+</ol>
+<h3 id="historique-de-rust"><strong>historique de Rust</strong></h3>
+<p>Le programmeur <strong>graydon hoare</strong>, a commencé le projet Rust en 2006 quand il travaillait chez Mozilla. Plutard l&rsquo;entreprise a parrainé le projet et l&rsquo;a annoncé en 2010. En suite la première version stable du langage est sortie en 2015.</p>
+<h3 id="cest-quoi-rust-"><strong>C&rsquo;est quoi Rust ?</strong></h3>
+<p>Rust est un langage de <code>programmation système</code>, <code>compilé</code>, <code>parallèle</code>, et <code>concurrent</code> qui prône la <code>sécurité</code> de la mémoire tout en étant <code>performant</code>.</p>
+<p>Rust s&rsquo;inspire des langages <code>C/C++</code> en terme de performance et syntaxiquement des langages tels que <code>Haskell</code>, <code>Erlang</code> etc..</p>
+<h3 id="a-quoi-sert-rust-"><strong>A quoi sert Rust ?</strong></h3>
+<h4 id="rust-est-principalement-utilisé-"><strong>Rust est principalement utilisé :</strong></h4>
+<ol>
+<li>
+<p>Dans création des application système : <em><strong>serveurs</strong></em>, <em><strong>les parfeux</strong></em>, <em><strong>les compilateurs</strong></em>, <em><strong>les bootloaders</strong></em>, <em><strong>les noyaux des Os</strong></em>  etc&hellip; En gros les applications dont l&rsquo;utilisateur n&rsquo;entre pas en contact directement.</p>
+</li>
+<li>
+<p>Dans les systèmes embarqués : <em><strong>le bios</strong></em>, <em><strong>les microcontrolleurs</strong></em>, <em><strong>Les IoT</strong></em> etc&hellip;</p>
+</li>
+<li>
+<p>Les systèmes distribués qui demandent de la performance : <em><strong>Les moteurs de recherches</strong></em>, <em><strong>Les systèmes de paiements en ligne</strong></em>, <em><strong>Les blockchaines</strong></em>, <em><strong>Les clouds</strong></em> etc&hellip;.</p>
+</li>
+<li>
+<p>Les outils en lignes de commandes.</p>
+</li>
+</ol>
+<h4 id="rust-est-aussi-utilisé-"><strong>Rust est aussi utilisé :</strong></h4>
+<ol>
+<li>Dans le Web :  pour créer des applications web sécurisée et performantes en <em><strong>Backend</strong></em> et <em><strong>frontend</strong></em>.</li>
+</ol>
+<p>Rust est utilisé là où il y demande de : <code>sécurité</code> ⛑️, <code>Rapidité ou performance</code> ⏩</p>
+<h3 id="qui-utilise-rust-"><strong>Qui utilise Rust ?:</strong></h3>
+<p>Chaque année depuis 2016 Rust est voté sur stackoverflow <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, comme étant le langage de programmation le plus aimé par les dévéloppeurs.</p>
+<p>Les grandes entreprises telques : <code>Google</code>,<code>Microsoft</code>,<code>Amazon</code>, <code>Dropbox</code>, <code>Shopify</code>, <code>Meta</code> et bien d&rsquo;autres entreprises<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> ont adopté Rust très tôt.</p>
+<h3 id="les-ressources-pour-apprendre-rust"><strong>Les ressources pour apprendre Rust</strong></h3>
+<p>Dans cette série d&rsquo;articles nous allons apprendre ensemble ce langage tant aimé. Je vais supposer que vous êtes débutant(e) en programmation, comme cela le contenu couvrira tous le monde.</p>
+<p>Vous pouvez me joindre  <a href="https://twitter.com/drealblackstar" target="_blank">sur twitter</a> si vous avez des corrections à me suggérer ou des questions.</p>
+<p>Voici quelques ressources utiles de plus pour approfondir vos connaissances:</p>
+<p><strong>En français 🇫🇷</strong></p>
+<ol>
+<li><a href="https://jimskapt.github.io/rust-book-fr/" target="_blank">Documentation en français</a></li>
+<li><a href="https://blog.guillaume-gomez.fr/Rust/1/1" target="_blank">Blog Guillaume Gomez, contenu un peu avancé</a></li>
+<li><a href="https://rust.developpez.com/cours/" target="_blank">Une list de cours sur le forum developpez</a></li>
+</ol>
+<p><strong>En Anglais 🇫🇷</strong></p>
+<ol>
+<li><a href="https://doc.rust-lang.org/book/" target="_blank">Documentation en Anglais</a></li>
+<li><a href="https://learn.microsoft.com/en-us/training/paths/rust-first-steps/" target="_blank">Cours de microsoft</a></li>
+</ol>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Stackoverflow 2022 <a href="https://survey.stackoverflow.co/2022/#technology-most-loved-dreaded-and-wanted" target="_blank">Sondage</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>La list des entreprises qui utilisent Rust en production <a href="https://www.rust-lang.org/production/users" target="_blank">List</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+
+<hr>
+<div class="pagination-bottom">
+
+    
+    
+    
+        <a class="next" href="https://rbs228.github.io/posts/2-installation-des-outils/"> Suivant</a>
+    
+    
+</div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/les-bases-du-langage-rust/">les-bases-du-langage-rust</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/les-bases-de-rust/">les-bases-de-rust</a>
+<a href="/tags/programmation/">programmation</a>
+<a href="/tags/rust/">rust</a>
+<a href="/tags/series/">series</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+
+
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/rsb228" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Installation des outils | RBS</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.108.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="rbs">
+<meta name="keywords" content="Rust, series, Les bases de Rust, programmation">
+<meta name="description" content="installation">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="Installation des outils" />
+<meta property="og:description" content="installation" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rbs228.github.io/posts/2-installation-des-outils/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-19T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Installation des outils"/>
+<meta name="twitter:description" content="installation"/>
+
+<meta itemprop="name" content="Installation des outils">
+<meta itemprop="description" content="installation"><meta itemprop="datePublished" content="2022-12-19T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-12-19T00:00:00+00:00" />
+<meta itemprop="wordCount" content="868">
+<meta itemprop="keywords" content="Rust,series,Les bases de Rust,programmation," />
+
+
+<style>
+
+    .pagination-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 2rem;
+    }
+    .pagination-bottom a{
+        padding: 10px;
+        background-color: rgb(218, 220, 221);
+        border: 1px solid rgb(224, 223, 223);
+    }
+
+    h1, h2 {
+        color:crimson;
+    }
+    h3, h4 {
+        color:rgb(102, 75, 201);
+    }
+    
+</style>
+</head>
+<body>
+<header>
+<div id="titletext">
+<h2 id="title"><a href="https://rbs228.github.io/">RBS</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">The real black star</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/rbs228" rel="me" aria-label="Github"><span title="Github" class="icons fab fa-github" aria-hidden="true"></span></a></li>
+<li><a href="https://twitter.com/drealblackstar" rel="me" aria-label="Twitter"><span title="Twitter" class="icons fab fa-twitter" aria-hidden="true"></span></a></li>
+<li><button id="dark-mode" aria-label="Switch Dark Mode"><span title="Switch Dark Mode" class="icons fas fa-moon" aria-hidden="true"></span></button></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Posts</a></li>
+<li><a href="/projects">Projets</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Catégories</a></li>
+<li><a href="/other">Autres</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">19</span>
+<span class="rest">Dec 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Installation des outils</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+
+
+<span aria-label="Author:"><span class="fas fa-user" aria-hidden="true"></span></span>&nbsp;
+
+rbs
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<h2 id="sommaire"><strong>Sommaire</strong></h2>
+<ol>
+<li>De quoi avons nous besoin pour programmer en Rust ?</li>
+<li>Les différentes choix possibles:
+<ul>
+<li>Les plateformes en ligne</li>
+<li>IDE</li>
+<li>Installation séparé</li>
+</ul>
+</li>
+</ol>
+<h2 id="1-de-quoi-avons-nous-besoin-pour-apprendre-rust-">1. De quoi avons nous besoin pour apprendre Rust ?</h2>
+<p>Avant ça c&rsquo;est quoi un langage de programmation ? c&rsquo;est quoi programmer ?</p>
+<p><strong>Programmer</strong>:
+<em>C&rsquo;est écrire une liste de chose que l&rsquo;ordinateur doit faire.</em>.</p>
+<p>Généralement on écris les programme en utilisant les lettres alphabétiques, <strong>sauf que l&rsquo;ordinateur ne comprend pas les lettres alphabétiques (A - Z), il ne comprend que :</strong> <em><strong>le langage binaire, un langage composé uniquement des <code>0</code> et <code>1</code></strong></em>.</p>
+<p>Ecrire tout un programme avec des <code>0</code>et <code>1</code>, c&rsquo;est compliqué, et non productif.</p>
+<p>Par exemple: l&rsquo;équivalent de <code>A</code> en binaire c&rsquo;est: <code>01000001</code>. Imaginez donc les miliers de lignes pour coder un site web.</p>
+<p>Alors comment faire ? Et bien c&rsquo;est là que les langages de programmation entrent en jeu.</p>
+<p><strong>Un langage de progrmmation</strong>:
+<em>C&rsquo;est un système de notation pour écrire des programmes compréhensibles informatiques. On utilise <code>un ensemble d'alphabets</code>, qui forme des mots spécifiques. cet ensemble mots  sont appélés <strong>les mots clés ou réservés</strong></em>.</p>
+<p>Par exemple: <code>if</code>, <code>else</code> etc&hellip; En combinants ces mots on peut donc écrire des programmes.</p>
+<p>Lorsqu&rsquo;on finis d&rsquo;écrire en combinants ces mots clés, ce n&rsquo;est toujours pas le binaire, on a donc besoin de traduire ça en binaire(vous savez, le seul langage que l&rsquo;ordinateur comprend).</p>
+<p>Pour traduire on utilise soit <code>un compilateur</code>, soit <code>un interpréteur</code>. Cela dépend des langages programmation, certains demandent un interpréteur, d&rsquo;autres un compilateur.</p>
+<ol>
+<li>
+<p><strong><code>Un interpréteur :</code></strong> traduit votre fichier source ligne par ligne, à l&rsquo;ordinateur. Il traduit une ligne en binaire l&rsquo;ordinateur comprend, et l&rsquo;exécute, en suite une autre ligne. Ansi de suite jusqu&rsquo;à la fin de l&rsquo;exécution du programme. Les langages interprétés (ou qui ont besoin d&rsquo;un interpréteur) on a: <code>javascript</code>, <code>python</code>, <code>php</code> etc&hellip;</p>
+</li>
+<li>
+<p><strong><code>Un compilateur :</code></strong> traduit tout votre fichier source en binanire, d&rsquo;un seul coup, rassemble la traduction en un fichier qu&rsquo;on appel le fichier exécutable, on donne ce dernier à l&rsquo;ordinateur, qui comprend et exécute tout le programme. Les langages compilés (ou qui ont besoin d&rsquo;un compilateur) on a: <code>Rust</code>, <code>C</code>, <code>C++</code>, <code>Golang</code> etc&hellip;</p>
+</li>
+</ol>
+<p><strong>Le fichier source:</strong> <em>C&rsquo;est le fichier qui contient votre code écris avec les mots clés</em></p>
+<p><strong>Par analogie aux compilateur et interpréteur:</strong></p>
+<p><em>Les traducteurs des langues (à l&rsquo;ONU, ou les matchs de foot) ils ont le choix:</em></p>
+<p><em><strong>1. soit ils font la traductions au fur et à mésure qu&rsquo;on parle, c&rsquo;est à dire phrase, par phrase(c&rsquo;est le cas de l&rsquo;interpréteur)</strong></em></p>
+<p><em><strong>2. soit ils écoutent, jusqu&rsquo;à la fin et après ils font la traduction d&rsquo;un seul coup(c&rsquo;est le cas du compilateur)</strong></em></p>
+<p>Donc si on analyse bien pour apprendre le langage Rust:</p>
+<ol>
+<li>Rust est compilé, donc on a besoin d&rsquo;un <code>compilateur</code>.</li>
+<li>On a besoin d&rsquo;un programme pour écrire notre code : <code>éditeur de code</code>.</li>
+</ol>
+<p><figure>
+  <img src="/programming-flow.png" alt="Programming flow"  />
+</figure></p>
+<h2 id="2-les-différents-choix-dinstallations-possibles">2. Les différents choix d&rsquo;installations possibles</h2>
+<h3 id="les-plateformes-en-ligne-">Les plateformes en ligne :</h3>
+<p>Vous pouvez apprendre Rust sans installer quoi que ce soit sur votre machine, il existe des sites web qui mettent à votre disposition (gratuitement) : un compilateur et un éditeur de code.</p>
+<p>Je vous recommande <a href="https://play.rust-lang.org/" target="_blank">Rust Playground</a></p>
+<ol>
+<li>Allez sur le site</li>
+<li>Editeur de text: où écrire votre code</li>
+<li>Compilez et exécutez votre programme</li>
+<li>Observez le resultat</li>
+</ol>
+<p><figure>
+  <img src="/playground.png" alt="Rust Playground"  />
+</figure></p>
+<h3 id="les-environnements-de-développement-intégré-ou-ide-">Les environnements de développement intégré ou IDE :</h3>
+<p>Ce sont des logiciels qui contiennent l&rsquo;éditeur, le compilateur et d&rsquo;autres choses utiles au développement des programmes. Ces programmes sont disponibles, sur Windows, MacOS, Linux</p>
+<p>Je vous recommande  <a href="https://www.jetbrains.com/idea/download/#section=linux" target="_blank">IntelliJ Idea</a></p>
+<p><em>Je ferais un article spécial pour la configuration de intelliJ.</em></p>
+<h3 id="installation-séparé-">Installation séparé :</h3>
+<p>Ici on installe les programmes qu&rsquo;on a besoin (compilateur, éditeur de text), séparément.</p>
+<p>C&rsquo;est le choix que je vais opter pour ce cours, cela nous permettra d&rsquo;apprendre à utiliser ces programmes et surtout ne pas dépendre de ces plateformes ou IDE.</p>
+<ol>
+<li><strong>Sous Linux</strong>: C&rsquo;est très simple</li>
+</ol>
+<hr>
+<p><strong>Installation du compilateur Rust</strong></p>
+<ul>
+<li>Allez sur <a href="https://www.rust-lang.org/tools/install" target="_blank">Le site de Rust</a></li>
+<li>Téléchargez Rustup (l&rsquo;outil d&rsquo;installation). Copiez cette ligne depuis le site</li>
+</ul>
+<blockquote>
+<p>curl &ndash;proto &lsquo;=https&rsquo; &ndash;tlsv1.2 -sSf <a href="https://sh.rustup.rs" target="_blank">https://sh.rustup.rs</a> | sh</p>
+</blockquote>
+<p>Collez sur votre terminal et appuyez sur entrez</p>
+<ul>
+<li>Vous verez 3 options, <strong>choisissez la première</strong></li>
+<li>Après l&rsquo;installation <strong>fermez</strong> puis <strong>reouvrez</strong> le terminal</li>
+<li>tapez cette commande:</li>
+</ul>
+<blockquote>
+<p>rustc &ndash;version</p>
+</blockquote>
+<ul>
+<li>
+<p>Vous verez la version de Rust.
+<figure>
+  <img src="/rustcversion.png" alt="Rustc"  />
+</figure></p>
+</li>
+<li>
+<p><em>Installation de l&rsquo;éditeur de text</em> :</p>
+</li>
+</ul>
+<p>Ici j&rsquo;ai choisi <a href="https://code.visualstudio.com/" target="_blank">vscode</a>, c&rsquo;est un éditeur de code riche en fonctionnalités qui nous aidera dans l&rsquo;apprentissage de Rust.</p>
+<p>Mais vous pouvez utiliser celui que vous voulez : <code>vim</code>, <code>Sublime text</code>, <code>atome</code> etc&hellip;
+Le téléchargez et lancez l&rsquo;installation avec cette command dans le terminal:</p>
+<blockquote>
+<p>sudo dpkg -i nom_du_package_que_vous_avez_.deb</p>
+</blockquote>
+<ol start="2">
+<li><strong>Sous Windows</strong>: Ce n&rsquo;est pas très simple.</li>
+</ol>
+<hr>
+<ul>
+<li>Allez sur <a href="https://www.rust-lang.org/tools/install" target="_blank">Le site de Rust</a></li>
+<li>Téléchargez l&rsquo;éxécutable de Rustup (l&rsquo;outil d&rsquo;installation).</li>
+<li>Lancez l&rsquo;éxécutable, suivez les instructions.</li>
+<li>Vous verez 3 options, <strong>choisissez la première</strong></li>
+<li>Ils vont demander d&rsquo;installer <a href="https://visualstudio.microsoft.com/visual-cpp-build-tools/" target="_blank">Visual Studio C++ Build tools</a></li>
+<li>Lors de l&rsquo;installation de <code>Visual Studio C++ Build tools</code> selectionnez <code>C++ tools</code>.</li>
+<li>Après l&rsquo;installation <strong>fermez</strong> pui <strong>reouvrez</strong> le terminal</li>
+<li>tapez cette commande:</li>
+</ul>
+<blockquote>
+<p>rustc &ndash;version</p>
+</blockquote>
+<ul>
+<li>
+<p>Vous verez la version de Rust.
+<figure>
+  <img src="/rustcversionw.png" alt="Rustc"  />
+</figure></p>
+</li>
+<li>
+<p><em>Installation de l&rsquo;éditeur de text</em> :
+Ici j&rsquo;ai choisi <a href="https://code.visualstudio.com/" target="_blank">vscode</a>, c&rsquo;est un éditeur de code riche en fonctionnalités qui nous aidera dans l&rsquo;apprentissage de Rust.</p>
+</li>
+</ul>
+<p>Le téléchargez et lancez l&rsquo;installation tout simplement</p>
+<h3 id="je-crois-quon-est-bon-pour-commencer-à-programmer-en-rustle-langage-des-stars-">Je crois qu&rsquo;on est bon, pour commencer à programmer en RUST(le langage des stars 😆)</h3>
+<h3 id="si-vous-avez-des-soucis-dinstallation-écrivez-moi-sur-sur-twitterhttpstwittercomdrealblackstar"><code>Si vous avez des soucis d'installation écrivez moi sur</code> <a href="https://twitter.com/drealblackstar" target="_blank">sur twitter</a></h3>
+
+
+<hr>
+<div class="pagination-bottom">
+
+    
+        <a class="previous" href="https://rbs228.github.io/posts/1-generalities/"> Précédent </a>
+    
+    
+    
+        <a class="next" href="https://rbs228.github.io/posts/3-hello-world/"> Suivant</a>
+    
+    
+</div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/les-bases-du-langage-rust/">les-bases-du-langage-rust</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/les-bases-de-rust/">les-bases-de-rust</a>
+<a href="/tags/programmation/">programmation</a>
+<a href="/tags/rust/">rust</a>
+<a href="/tags/series/">series</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+
+
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/rsb228" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

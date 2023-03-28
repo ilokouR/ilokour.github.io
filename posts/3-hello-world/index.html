@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Le Hello world et anatomie d&#39;un programme Rust | RBS</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.108.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="rbs">
+<meta name="keywords" content="Rust, series, Les bases de Rust, programmation">
+<meta name="description" content="Les différentes parties d&#39;un programme Rust">
+<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/all.css" /><link rel="stylesheet" href="/css/katex.css" crossorigin="anonymous">
+<script defer src="/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
+<script defer src="/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="Le Hello world et anatomie d&#39;un programme Rust" />
+<meta property="og:description" content="Les différentes parties d&#39;un programme Rust" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rbs228.github.io/posts/3-hello-world/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-12-18T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Le Hello world et anatomie d&#39;un programme Rust"/>
+<meta name="twitter:description" content="Les différentes parties d&#39;un programme Rust"/>
+
+<meta itemprop="name" content="Le Hello world et anatomie d&#39;un programme Rust">
+<meta itemprop="description" content="Les différentes parties d&#39;un programme Rust"><meta itemprop="datePublished" content="2022-12-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-12-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="393">
+<meta itemprop="keywords" content="Rust,series,Les bases de Rust,programmation," />
+
+
+<style>
+
+    .pagination-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 2rem;
+    }
+    .pagination-bottom a{
+        padding: 10px;
+        background-color: rgb(218, 220, 221);
+        border: 1px solid rgb(224, 223, 223);
+    }
+
+    h1, h2 {
+        color:crimson;
+    }
+    h3, h4 {
+        color:rgb(102, 75, 201);
+    }
+    
+</style>
+</head>
+<body>
+<header>
+<div id="titletext">
+<h2 id="title"><a href="https://rbs228.github.io/">RBS</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle">The real black star</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/rbs228" rel="me" aria-label="Github"><span title="Github" class="icons fab fa-github" aria-hidden="true"></span></a></li>
+<li><a href="https://twitter.com/drealblackstar" rel="me" aria-label="Twitter"><span title="Twitter" class="icons fab fa-twitter" aria-hidden="true"></span></a></li>
+<li><button id="dark-mode" aria-label="Switch Dark Mode"><span title="Switch Dark Mode" class="icons fas fa-moon" aria-hidden="true"></span></button></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/">Posts</a></li>
+<li><a href="/projects">Projets</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/categories">Catégories</a></li>
+<li><a href="/other">Autres</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+<div class="date">
+<span class="day">18</span>
+<span class="rest">Dec 2022</span>
+</div>
+</div>
+<div class="matter">
+<h1 class="title">Le Hello world et anatomie d&#39;un programme Rust</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+
+
+<span aria-label="Author:"><span class="fas fa-user" aria-hidden="true"></span></span>&nbsp;
+
+rbs
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<h2 id="sommaire"><strong>Sommaire</strong></h2>
+<ol>
+<li>Installation des extension dans vscode</li>
+<li>Compilation avec rustc</li>
+<li>Anatomie d&rsquo;un programme Rust</li>
+</ol>
+<p>Traditionnellement lorsqu&rsquo;on veut apprendre à programmer dans un langage, on commence d&rsquo;abord par apprendre à afficher un message (généralement <code>Hello world</code>) à l&rsquo;écran.</p>
+<p>C&rsquo;est exactement ce que nous allons faire.</p>
+<p>Mais avant de le faire, on va faire un petit travail.</p>
+<h2 id="installation-des-extensions-dans-léditeur-de-text--ajouté-dautres-fonctionnalités-à-notre-logiciel">Installation des extensions dans l&rsquo;éditeur de text = ajouté d&rsquo;autres fonctionnalités à notre logiciel.</h2>
+<p>Dans cette partie nous allons installer quelques extensions dans notre éditeur de code:</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer" target="_blank">rust-analyzer : cliquez pour installer ou bien suvez les étapes ci dessous</a> : Cette extension va nous aider énormément dans la  détection des erreurs dans notre code.</li>
+</ul>
+<ol>
+<li>cliquez sur l&rsquo;icône des extensions</li>
+<li>Cherchez l&rsquo;extension <code>rust-analyzer</code></li>
+<li>Cliquez sur <code>install</code></li>
+</ol>
+<p><figure>
+  <img src="/rust-analyser.png" alt="rust analyser"  />
+</figure></p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank">Material icons : même procedure que l’extension précédente</a>  : pour afficher les icons des fichiers, et dossiers, dans visual studio code.</li>
+</ul>
+<h2 id="compilation-avec-rustc">Compilation avec rustc</h2>
+<p><code>Compiler</code> : c&rsquo;est traduire un <strong>code source</strong> (non compréhensible par l&rsquo;ordinateur) en un <strong>code binaire</strong> ( = code machine = langage machine = langage binaire = langage compréhensible par l&rsquo;ordinateur).</p>
+<p>Pour commencer nous allons créer le <strong>code source</strong>, pour le faire:</p>
+<ol>
+<li>Créez un dossier sur votre bureau, nommez le :  <strong>helloworld</strong></li>
+<li>Entrez dans le dossier, créez un fichier et nommez le :  <strong>main.rs</strong></li>
+<li>Ouvrez l&rsquo;éditeur de code, et importez le dossier <strong>helloworld</strong> depuis votre bureau:</li>
+</ol>
+<p><figure>
+  <img src="/vscode.png" alt="vscode"  />
+</figure></p>
+<ol start="4">
+<li>
+<p>Vous aurez cet image
+<figure>
+  <img src="/helloworldfile.png" alt="hellow"  />
+</figure></p>
+</li>
+<li>
+<p>Ecrivez le code si dessous dans l&rsquo;espace <code>2</code></p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>fn main(){
+</span></span><span style="display:flex;"><span>    println!(&#34;Hello world, iam learning Rust programming language&#34;)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="6">
+<li>
+<p>Ouvez le terminal dans l&rsquo;éditeur de text, <strong>on va compiler</strong>
+<figure>
+  <img src="/term.png" alt="term"  />
+</figure></p>
+</li>
+<li>
+<p>Tapez la commande ci dessous dans le terminal et appuyez sur la touche ENTREZ:</p>
+</li>
+</ol>
+<blockquote>
+<p>rustc main.rs</p>
+</blockquote>
+<ul>
+<li><code>rustc</code> : c&rsquo;est le nom du compilateur de rust (vous l&rsquo;avez installé à travers l&rsquo;outil d&rsquo;installation <strong>rustup</strong>).</li>
+<li><code>main.rs</code> : c&rsquo;est le fichier contenant votre code.(donc ici vous passez votre fichier source au compilateur de rust pour qu&rsquo;il le traduit en langage machine)</li>
+</ul>
+<p><strong>Vous avez compilé votre premier programme</strong></p>
+<p>Dans l&rsquo;image ci dessous :</p>
+<p><em><strong>Le fichier <code>main.exe</code> en <code>2</code> est le programme compilé de <code>3</code> après avoir tapé la commande en <code>1</code></strong></em></p>
+<blockquote>
+<p><strong>Note</strong> : Je suis sous windows. Si vous êtes sous Linux vous aurez un fichier <code>a.out</code> au lieu de <code>main.exe</code></p>
+</blockquote>
+<p><figure>
+  <img src="/exe.png" alt="exe"  />
+</figure></p>
+<ol start="8">
+<li>Maintenant on va exécuter le programme compilé <code>main.exe</code>, Tapez dans le terminal, la commande:</li>
+</ol>
+<blockquote>
+<p>./main.exe</p>
+</blockquote>
+<p>Dans l&rsquo;image ci dessous, après avoir tapé la commande en <code>1</code>, vous avez le resultat en <code>2</code>
+<figure>
+  <img src="/msg.png" alt="msg"  />
+</figure></p>
+<h2 id="anatomie-dun-programme-rust">Anatomie d&rsquo;un programme Rust</h2>
+
+
+<hr>
+<div class="pagination-bottom">
+
+    
+        <a class="previous" href="https://rbs228.github.io/posts/2-installation-des-outils/"> Précédent </a>
+    
+    
+    
+    
+</div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/categories/les-bases-du-langage-rust/">les-bases-du-langage-rust</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/tags/les-bases-de-rust/">les-bases-de-rust</a>
+<a href="/tags/programmation/">programmation</a>
+<a href="/tags/rust/">rust</a>
+<a href="/tags/series/">series</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+
+
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/rsb228" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/js/dark-mode.js"></script>
+
+</body>
+</html>

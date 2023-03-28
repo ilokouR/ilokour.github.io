@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Others on ILOKOU&#39;S</title>
+		<link>https://ilokour.github.io/other/</link>
+		<description>Recent content in Others on ilokour.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>fr-FR</language>
+		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
+		<lastBuildDate>Sun, 18 Dec 2022 02:31:03 -0800</lastBuildDate>
+		<atom:link href="https://ilokour.github.io/other/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>About</title>
+			<link>https://ilokour.github.io/other/about/</link>
+			<pubDate>Sun, 18 Dec 2022 02:31:03 -0800</pubDate>
+			<guid>https://ilokour.github.io/other/about/</guid>
+			<description>
+			Who i’m ? Goog question. Well iam paguedem, from Africa, Togo.
+What i like ? Yes, i like a lot of things hhhh: sharing, programming, art, … …
+			</description>
+		</item>
+	</channel>
+</rss>
